@@ -1,11 +1,20 @@
-
+{{> header}}
 <div class="container-fluid m-2 p-5 bg-primary text-center">
     <h1>Les Marvels</h1>
+    <ul>
+    {{#each characters}}
+      <li>
+        <img src ="{{this.imageUrl}}">
+        <p>{{this.name}}</p>
+        <p>{{this.desc}}</p>
+      </li>
+    {{/each}}
+  </ul>
 </div>
 <div class="container m-2 p-5 bg-primary  text-center">
     <h2>Mes comics</h2>
 
 </div>
-
+{{> footer}}
 
 
