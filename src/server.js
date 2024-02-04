@@ -27,7 +27,7 @@ app.get('/', async (request, reply) => {
 });
 
 
-app.listen({ port: 3000 }, (err) => {
+app.listen({ port: 3000, host : "0.0.0.0" }, (err) => {
     if (err) throw err;
     console.log(`server listening on ${app.server.address().port}`);
 });

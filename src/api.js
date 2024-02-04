@@ -1,9 +1,15 @@
 import crypto from "node:crypto"
 import fetch from "node-fetch";
 
+import * as dotenv from "dotenv";
 
-const publicKey = "b466c85dfb561843871a2f024b5e505d";
-const privateKey = "d482ff9ab67ce4bbd83d7f8d0f58879dc2cd753c";
+dotenv.config({
+    path : "../.env"
+})
+
+
+const publicKey = process.env.PUBKEY;
+const privateKey = process.env.PRIKEY;
 
 /**
  * Récupère les données de l'endpoint en utilisant les identifiants
